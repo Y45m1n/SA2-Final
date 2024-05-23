@@ -41,9 +41,7 @@ include 'functions.php';
                 <div class="card-body">
                     <h5 class="card-title">Fiat Mobi</h5>
                     <p class="card-text">
-                    É um veículo compacto e eficiente, perfeito para deslocamentos urbanos. <br>
-                    Com um design moderno e economia de combustível, oferece conforto e agilidade em cada viagem. <br>
-                     Experimente a praticidade e versatilidade do Fiat Mobi.
+          
 </p>
                     <a href="create.php" class="btn btn-primary">Realizar Reserva</a> 
                 </div>
@@ -55,8 +53,7 @@ include 'functions.php';
                 <div class="card-body">
                     <h5 class="card-title">Corolla</h5>
                     <p class="card-text">
-                    O Toyota Corolla é um sedã renomado, reconhecido por sua confiabilidade, conforto e tecnologia. <br>
-                     Com um design elegante e espaçoso, oferece uma experiência de condução suave e refinada. <br>
+          
                 
             
                   </p>
@@ -68,12 +65,10 @@ include 'functions.php';
             <div class="card" style="align-items:center;">
                 <img src="img/minivan.webp" class="card-img-top" alt="Imagem do Card 3" style="width:300px; height: 200px;">
                 <div class="card-body">
-                    <h5 class="card-title">Fiat Minivan</h5>
+                    <h5 class="card-title"></h5>
                     <p class="card-text">
 
-                    A minivan é a escolha ideal para famílias que buscam espaço e conforto em suas viagens. <br>
-                     Com grande capacidade de pessoas e bagagens, oferece versatilidade e praticidade. 
-                     Experimente o amplo espaço interior e o conforto da minivan.
+                   
 </p>
 <a href="create.php" class="btn btn-primary">Realizar Reserva</a> 
                 </div>
