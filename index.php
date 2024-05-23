@@ -16,7 +16,7 @@ include 'functions.php';
                     <p class="card-text">
           Cadastro de Item para Estoque de Materiais.
 </p>
-                    <a href="cadastro_estoque.php" class="btn btn-primary">Cadastrar</a> 
+                    <a href="estoque/cadastro_estoque.php" class="btn btn-primary">Cadastrar</a> 
                 </div>
             </div>
         </div>

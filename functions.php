@@ -35,8 +35,7 @@ function template_header($title) {
             <div>
                 <img src="img/logo.png" alt="Descrição da imagem">
                 <h1> Sistema de Gerenciamento de Estoque e Ativos Patrimoniais</h1>
-                <a href="index.php"><i class="fas fa-home"></i>Home</a>
-                <a href="cad_patrimonios.php"><i class="fas fa-car"></i>Patrimonios</a>         
+                <a href="index.php"><i class="fas fa-home"></i>Home</a>      
             </div>
         </nav>
     EOT;
