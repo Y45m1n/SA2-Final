@@ -1,35 +1,8 @@
 <?php
 include 'functions.php';
 ?>
-<?= template_header ('Loca aqui!')?>
+<?= template_header ('SENAI')?>
 
-<div class="content text-center">
-    <h2 style="color: #F1A204;">Se o assunto for economia de tempo, a solução mais prática, confortável e acessível para você e sua família é Aqui!</h2>
-    <p>Na Loca Aqui!, cada aluguel é uma jornada de liberdade e conveniência. Com uma variedade de veículos, atendimento personalizado e conforto garantido, proporcionamos uma experiência perfeita em cada viagem. 
-       </p>
-    
-       <div id="carouselExample" class="carousel slide" style="width: 100%;height: 300px; margin: 0;">
-    <div class="carousel-inner" style="width:100%; height: 600px;"> <!-- Altura mantida em 600px -->
-        <div class="carousel-item active">
-            <img src="img/img1.webp" class="d-block w-100" style="width: 100%; height: 350px; object-fit: cover;" alt="...">
-        </div>
-        <div class="carousel-item"> 
-            <img src="img/card2.jpg" class="d-block w-100" style="width: 100%; height: 350px; object-fit: cover;" alt="...">
-        </div>
-        <div class="carousel-item">
-            <img src="img/img3.webp" class="d-block w-100" style="width: 100%; height: 350px; object-fit: cover;" alt="...">
-        </div>
-    </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-    </button>
-</div>
-</div>
 <div class="content text-center">
     <h2  style="color: #F1A204;">Veículos em destaque</h2>
     
@@ -39,11 +12,11 @@ include 'functions.php';
             <div class="card" style="align-items:center;">
                 <img src="img/fiatmobi.jpg" class="card-img-top" alt="Imagem do Card 1"  style="width:300px; height: 200px; ">
                 <div class="card-body">
-                    <h5 class="card-title">Fiat Mobi</h5>
+                    <h5 class="card-title">Cadastro de Item</h5>
                     <p class="card-text">
-          
+          Cadastro de Item para Estoque de Materiais.
 </p>
-                    <a href="create.php" class="btn btn-primary">Realizar Reserva</a> 
+                    <a href="cadastro_estoque.php" class="btn btn-primary">Cadastrar</a> 
                 </div>
             </div>
         </div>
@@ -51,13 +24,13 @@ include 'functions.php';
             <div class="card" style="align-items:center;">
                 <img src="img/corolla.webp" class="card-img-top" alt="Imagem do Card 1" style="width:250px; height: 222px;">
                 <div class="card-body">
-                    <h5 class="card-title">Corolla</h5>
+                    <h5 class="card-title">Cadastro de Patrimonio</h5>
                     <p class="card-text">
-          
+                    Cadastro de Ativos Patrimoniais.
                 
             
                   </p>
-                    <a href="create.php" class="btn btn-primary">Realizar Reserva</a> 
+                    <a href="patrimonios/cad_patrimonios.php" class="btn btn-primary">Cadastrar</a> 
                 </div>
             </div>
         </div>
