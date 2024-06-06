@@ -16,14 +16,14 @@ if (isset($_GET['numero_patrimonio'])) {
     $numero_patrimonio = $_GET['numero_patrimonio'];
 
     // Query para apagar o produto específico
-    $query = "DELETE FROM patrimonio_produtos WHERE numero_patrimonio = '$numero_patrimonio'";
+    $query = "DELETE FROM nome_material WHERE id_material = '$id_material'";
     $result = pg_query($conn, $query);
 
     if (!$result) {
         die("Erro na exclusão do produto: " . pg_last_error());
     } else {
         // Redireciona para a página de listagem após exclusão bem-sucedida
-        header("Location: /estoque/listar_estoque.php");
+        header("Location: /estoque/listar_material.php");
         exit;
     }
 }
