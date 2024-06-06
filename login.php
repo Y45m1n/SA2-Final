@@ -40,47 +40,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 ?>
 
-<<<<<<< HEAD
-<div class="content text-center">
-    <h2  style="color: #F1A204;">Veículos em destaque</h2>
-    
-    <div class="row mt-5">
-        <!-- Cards superiores -->
-        <div class="col-md-4 mb-4" >
-            <div class="card" style="align-items:center;">
-                <img src="img/fiatmobi.jpg" class="card-img-top" alt="Imagem do Card 1"  style="width:300px; height: 200px; ">
-                <div class="card-body">
-                    <h5 class="card-title">Cadastro de Item</h5>
-                    <p class="card-text">
-          Cadastro de Item para Estoque de Materiais.
-</p>
-                    <a href="estoque/cadastro_estoque.php" class="btn btn-primary">Cadastrar</a> 
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4 mb-4">
-            <div class="card" style="align-items:center;">
-                <img src="img/corolla.webp" class="card-img-top" alt="Imagem do Card 1" style="width:250px; height: 222px;">
-                <div class="card-body">
-                    <h5 class="card-title">Cadastro de Patrimonio</h5>
-                    <p class="card-text">
-                    Cadastro de Ativos Patrimoniais.
-                
-            
-                  </p>
-                    <a href="cad_patrimonios.php" class="btn btn-primary">Cadastrar</a> 
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4 mb-4">
-            <div class="card" style="align-items:center;">
-                <img src="img/minivan.webp" class="card-img-top" alt="Imagem do Card 3" style="width:300px; height: 200px;">
-                <div class="card-body">
-                    <h5 class="card-title"></h5>
-                    <p class="card-text">
-=======
 <?= template_header('Loca aqui!') ?>
->>>>>>> 1d191212a12828d6c80ddd01ea6ce72cd2709d56
 
 <link rel="stylesheet" href="login.css">
 
