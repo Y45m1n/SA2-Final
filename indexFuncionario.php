@@ -9,7 +9,7 @@ include 'functions.php';
             <!-- Cards superiores -->
             <div class="col-md-4 mb-4">
                 <div class="card" style="align-items:center;">
-                    <img src="img/" class="card-img-top" alt="Imagem do Card 1" style="width:300px; height: 200px; ">
+                    <img src="img/card1.png" class="card-img-top" alt="Imagem do Card 1" style="width:300px; height: 200px; ">
                     <div class="card-body">
                         <h5 class="card-title">Cadastro de Item</h5>
                         <p class="card-text">Cadastro de Item para Estoque de Materiais.</p>
@@ -19,20 +19,25 @@ include 'functions.php';
             </div>
             <div class="col-md-4 mb-4">
                 <div class="card" style="align-items:center;">
-                    <img src="img/" class="card-img-top" alt="Imagem do Card 1" style="width:300px; height: 200px;">
+                    <img src="img/card2.png" class="card-img-top" alt="Imagem do Card 2" style="width:300px; height: 200px;">
                     <div class="card-body">
                         <h5 class="card-title">Cadastro de Patrimônio</h5>
                         <p class="card-text">Cadastro de Ativos Patrimoniais.</p>
+                        <br>
                         <a href="cad_patrimonios.php" class="btn btn-primary">Cadastrar</a> 
                     </div>
                 </div>
             </div>
             <div class="col-md-4 mb-4">
                 <div class="card" style="align-items:center;">
-                    <img src="img/" class="card-img-top" alt="Imagem do Card 3" style="width:300px; height: 200px;">
+                    <img src="img/funcionariocard.png" class="card-img-top" alt="Imagem do Card 3" style="width:300px; height: 200px;">
                     <div class="card-body">
-                        <h5 class="card-title">Listar Ativos Patrimoniais</h5>
-                        <a href="listar_produtos.php" class="btn btn-primary">Listar</a> 
+                    <h5 class="card-title">Cadastro de Funcionário</h5>
+                    <p class="card-text">Cadastro de Funcionarios da escola.</p>
+                        <br>
+                        <a href="createFuncionario.php" class="btn btn-primary">Cadastrar</a> 
+                       
+                       
                     </div>
                 </div>
             </div>
@@ -41,41 +46,84 @@ include 'functions.php';
         <div class="row">
             <div class="col-md-4 mb-4">
                 <div class="card" style="align-items:center;">
-                    <img src="img/" class="card-img-top" alt="Imagem do Card 3" style="width:300px; height: 200px;">
+                <img src="img/card3e4.jpg" class="card-img-top" alt="Imagem do Card 6" style="width:200px; height: 200px;">
+                  
                     <div class="card-body">
-                        <h5 class="card-title">Cadastrar Funcionário</h5>
-                        <a href="createFuncionario.php" class="btn btn-primary">Cadastrar</a> 
+                    <h5 class="card-title">Listar Materais</h5>
+                        <p class="card-text">Lista de materiais no da escola.</p>
+                        <br>
+                        <a href="estoque/listar_material.php" class="btn btn-primary">Listar</a> 
                     </div>
                 </div>
             </div>
             <div class="col-md-4 mb-4">
                 <div class="card" style="align-items:center;">
-                    <img src="img/" class="card-img-top" alt="Imagem do Card 3" style="width:300px; height: 200px;">
+                <img src="img/card3e4.jpg" class="card-img-top" alt="Imagem do Card 4" style="width:200px; height: 200px;">
+                   
                     <div class="card-body">
-                        <h5 class="card-title">Listar Funcionário</h5>
-                        <a href="listarFuncionario.php" class="btn btn-primary">Listar</a> 
+                    <h5 class="card-title">Listar Ativos Patrimoniais</h5>
+                        <p class="card-text">Lista de Ativos Patrimoniais da escola.</p>
+                       
+                        <br>
+                        <a href="listar_produtos.php" class="btn btn-primary">Listar</a> 
                     </div>
                 </div>
             </div>
 
             <div class="col-md-4 mb-4">
                 <div class="card" style="align-items:center;">
-                    <img src="img/" class="card-img-top" alt="Imagem do Card 3" style="width:300px; height: 200px;">
+                <img src="img/listafun.png" class="card-img-top" alt="Imagem do Card 5" style="width:300px; height: 200px;">
                     <div class="card-body">
                         <h5 class="card-title">Listar Funcionário</h5>
+                        <p class="card-text">Lista de funcionarios da escola.</p>
+                        <br>
                         <a href="listarFuncionario.php" class="btn btn-primary">Listar</a> 
                     </div>
                 </div>
             </div>
         </div>
-        
+        <div class="row">
+        <div class="col-md-4 mb-4">
+                <div class="card" style="align-items:center;">
+                <img src="img/listafun.png" class="card-img-top" alt="Imagem do Card 5" style="width:300px; height: 200px;">
+                    <div class="card-body">
+                        <h5 class="card-title">Listar Funcionário</h5>
+                        <p class="card-text">Lista de funcionarios da escola.</p>
+                        <br>
+                        <a href="listarFuncionario.php" class="btn btn-primary">Listar</a> 
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card" style="align-items:center;">
+                <img src="img/listafun.png" class="card-img-top" alt="Imagem do Card 5" style="width:300px; height: 200px;">
+                    <div class="card-body">
+                        <h5 class="card-title">Listar Funcionário</h5>
+                        <p class="card-text">Lista de funcionarios da escola.</p>
+                        <br>
+                        <a href="listarFuncionario.php" class="btn btn-primary">Listar</a> 
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card" style="align-items:center;">
+                <img src="img/listafun.png" class="card-img-top" alt="Imagem do Card 5" style="width:300px; height: 200px;">
+                    <div class="card-body">
+                        <h5 class="card-title">Listar Funcionário</h5>
+                        <p class="card-text">Lista de funcionarios da escola.</p>
+                        <br>
+                        <a href="listarFuncionario.php" class="btn btn-primary">Listar</a> 
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
     
 </div>
 
 <style>
     .card {
-    height: 300px; /* Defina a altura desejada para todos os cards */
+    height: 380px; /* Defina a altura desejada para todos os cards */
 }
 
 </style>

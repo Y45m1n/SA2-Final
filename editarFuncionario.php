@@ -32,11 +32,11 @@ if (isset($_GET['cpf'])) {
 
 
 <?=template_header('Atualizar/Alterar funcionario')?>
-<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="style.css">
 
 <div class="content update">
-<a href="indexFuncionario.php"><i class="fas fa-home"></i>Home Funcionario</a>
-    <h2>Atualizar funcionario ---- <?=$funcionario['endereco'],' ', $funcionario['sobrenome']?></h2>
+
+    <h2>Atualizar funcionario ---- <?=$funcionario['nome'],' '?></h2>
     <form action="editarfuncionario.php?cpf=<?=$funcionario['cpf']?>" method="post">
         <label for="nome">nome</label>
         <label for="endereco">endereco</label>

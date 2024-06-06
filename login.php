@@ -40,7 +40,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 ?>
 
-<?= template_header('Loca aqui!') ?>
+<?= template_header('SENAI') ?>
 
 <link rel="stylesheet" href="login.css">
 

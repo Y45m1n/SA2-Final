@@ -21,7 +21,7 @@ $num_employees = $pdo->query('SELECT COUNT(*) FROM funcionario')->fetchColumn();
 
 
 <?=template_header('Visualizar funcionários')?>
-<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="index.css">
 
 
 <div class="content read">

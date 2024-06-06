@@ -4,9 +4,9 @@ $port = '5432';      // Porta padrão do PostgreSQL
 $dbname = 'db_patrimonio'; // Nome do banco de dados
 $user = 'postgres';         // Nome do usuário
 $password = 'postgres';      // Senha do usuário
-
 // Conexão com o banco de dados
 $conn = pg_connect("host=$host port=$port dbname=$dbname user=$user password=$password");
+
 
 if (!$conn) {
     die("Erro na conexão com o banco de dados: " . pg_last_error());
