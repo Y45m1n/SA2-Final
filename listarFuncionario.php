@@ -25,7 +25,6 @@ $num_employees = $pdo->query('SELECT COUNT(*) FROM funcionario')->fetchColumn();
 
 
 <div class="content read">
-
     <table>
         <thead>
             <tr>
@@ -41,7 +40,6 @@ $num_employees = $pdo->query('SELECT COUNT(*) FROM funcionario')->fetchColumn();
         <tbody>
             <?php foreach ($employees as $employee): ?>
             <tr>
-                
                 <td><?=$employee['nome']?></td>
                 <td><?=$employee['endereco']?></td>
                 <td><?=$employee['email']?></td>
@@ -49,8 +47,8 @@ $num_employees = $pdo->query('SELECT COUNT(*) FROM funcionario')->fetchColumn();
                 <td><?=$employee['cpf']?></td>
                 <td><?=$employee['ra']?></td>
                 <td class="actions">
-                    <a href="editFuncionario.php?id_funcionario=<?=$employee['id_funcionario']?>" class="edit"><i class="fas fa-pen fa-xs"></i></a>
-                    <a href="deleteFuncionario.php?id_funcionario=<?=$employee['id_funcionario']?>" class="trash"><i class="fas fa-trash fa-xs"></i></a>
+                    <a href="editarFuncionario.php?cpf=<?=$employee['cpf']?>" class="edit"><i class="fas fa-pen fa-xs"></i></a>
+                    <a href="apagarFuncionario.php?cpf=<?=$employee['cpf']?>" class="trash"><i class="fas fa-trash fa-xs"></i></a>
                 </td>
             </tr>
             <?php endforeach; ?>
@@ -65,5 +63,4 @@ $num_employees = $pdo->query('SELECT COUNT(*) FROM funcionario')->fetchColumn();
         <?php endif; ?>
     </div>
 </div>
-
 <?=template_footer()?>
