@@ -12,11 +12,11 @@ if (!$conn) {
     die("Erro na conexão com o banco de dados: " . pg_last_error());
 }
 
-if (isset($_GET['numero_patrimonio'])) {
-    $numero_patrimonio = $_GET['numero_patrimonio'];
+if (isset($_GET['id_material'])) {
+    $id_material = $_GET['id_material'];
 
     // Query para selecionar o produto específico
-    $query = "SELECT * FROM patrimonio_produtos WHERE numero_patrimonio = '$numero_patrimonio'";
+    $query = "SELECT * FROM nome_material WHERE id_material = '$id_material'";
     $result = pg_query($conn, $query);
 
     if (!$result) {
@@ -28,37 +28,24 @@ if (isset($_GET['numero_patrimonio'])) {
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Captura os dados do formulário
-    $numero_patrimonio = $_POST['numero_patrimonio'];
-    $nome_produto = $_POST['nome_produto'];
-    $descricao_produto = $_POST['descricao_produto'];
-    $data_aquisicao = $_POST['data_aquisicao'];
-    $fornecedor = $_POST['fornecedor'];
-    $custo_aquisicao = $_POST['custo_aquisicao'];
-    $localizacao = $_POST['localizacao'];
-    $responsavel = $_POST['responsavel'];
-    $valor_original = $_POST['valor_original'];
-    $vida_util_estimada = $_POST['vida_util_estimada'];
-    $status_atual = $_POST['status_atual'];
-    $data_ultima_manutencao = $_POST['data_ultima_manutencao'];
-    $proxima_manutencao_programada = $_POST['proxima_manutencao_programada'];
-    $fabricante = $_POST['fabricante'];
+    $nome_material = $_POST['nome_material'];
+    $id_material = $_POST['id_material'];
+    $quantidade = $_POST['quantidade'];
+    $categoria = $_POST['categoria'];
+    $data_entrada = $_POST['data_entrada'];
+    $tipo_movimentacao = $_POST['tipo_movimentacao'];
+    $data_movimentacao= $_POST['data_movimentacao'];
 
     // Query para atualizar os dados na tabela
     $query = "
     UPDATE patrimonio_produtos SET
-        nome_produto = '$nome_produto',
-        descricao_produto = '$descricao_produto',
-        data_aquisicao = '$data_aquisicao',
-        fornecedor = '$fornecedor',
-        custo_aquisicao = '$custo_aquisicao',
-        localizacao = '$localizacao',
-        responsavel = '$responsavel',
-        valor_original = '$valor_original',
-        vida_util_estimada = '$vida_util_estimada',
-        status_atual = '$status_atual',
-        data_ultima_manutencao = '$data_ultima_manutencao',
-        proxima_manutencao_programada = '$proxima_manutencao_programada',
-        fabricante = '$fabricante'
+        nome_materiaL = '$nome_material',
+        id_material = '$id_material',
+        quantidade = '$quantidade',
+        categoria = '$categoria',
+        data_entrada = '$data_entrada',
+        tipo_movimentacao = '$tipo_movimentacao',
+        data_movimentacao= '$data_movimentacao',
     WHERE numero_patrimonio = '$numero_patrimonio';
     ";
 
@@ -83,38 +70,33 @@ pg_close($conn);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Editar Produto</title>
-    <link rel="stylesheet" href="patrimonios.css">
+    <link rel="stylesheet" href="estoque.css">
 </head>
 <body>
     <div class="container">
         <h1>Editar Produto</h1>
-        <form action="editar_produto.php" method="post">
-            <input type="hidden" name="numero_patrimonio" value="<?php echo $produto['numero_patrimonio']; ?>">
-            <label for="nome_produto">Nome do Produto:</label>
-            <input type="text" id="nome_produto" name="nome_produto" value="<?php echo $produto['nome_produto']; ?>" required>
-            <label for="descricao_produto">Descrição do Produto:</label>
-            <textarea id="descricao_produto" name="descricao_produto"><?php echo $produto['descricao_produto']; ?></textarea>
-            <label for="data_aquisicao">Data de Aquisição:</label>
-            <input type="date" id="data_aquisicao" name="data_aquisicao" value="<?php echo $produto['data_aquisicao']; ?>" required>
-            <label for="fornecedor">Fornecedor:</label>
-            <input type="text" id="fornecedor" name="fornecedor" value="<?php echo $produto['fornecedor']; ?>">
-            <label for="custo_aquisicao">Custo de Aquisição:</label>
-            <input type="number" step="0.01" id="custo_aquisicao" name="custo_aquisicao" value="<?php echo $produto['custo_aquisicao']; ?>">
-            <label for="localizacao">Localização:</label>
-            <input type="text" id="localizacao" name="localizacao" value="<?php echo $produto['localizacao']; ?>">
-            <label for="responsavel">Responsável:</label>
-            <input type="text" id="responsavel" name="responsavel" value="<?php echo $produto['responsavel']; ?>">
-            <label for="valor_original">Valor Original:</label>
-            <input type="number" step="0.01" id="valor_original" name="valor_original" value="<?php echo $produto['valor_original']; ?>">
-            <label for="vida_util_estimada">Vida Útil Estimada (anos):</label>
-            <input type="number" id="vida_util_estimada" name="vida_util_estimada" value="<?php echo $produto['vida_util_estimada']; ?>">
-            <label for="status_atual">Status Atual:</label>
-            <input type="text" id="status_atual" name="status_atual" value="<?php echo $produto['status_atual']; ?>">
-            <label for="data_ultima_manutencao">Data da Última Manutenção:</label>
-            <input type="date" id="data_ultima_manutencao" name="data_ultima_manutencao" value="<?php echo $produto['data_ultima_manutencao']; ?>">
-            <label for="proxima_manutencao_programada">Próxima Manutenção Programada:</label>
-            <input type="date" id="proxima_manutencao_programada" name="proxima_manutencao_programada" value="<?php echo $produto['proxima_manutencao_programada']; ?>">
-            <label for="fabricante">Fabricante:</label>
+        <form action="editar_estoque.php" method="post">
+            <input type="hidden" name="id_material" value="<?php echo $produto['id_material']; ?>">
+            <label for="nome_material">Nome do Material:</label>
+
+            <input type="text" id="nome_material" name="nome_material" value="<?php echo $produto['nome_material']; ?>" required>
+            <label for="id_material">ID Do Material</label>
+
+            <input type="number" id="nome_material" name="nome_material" value="<?php echo $produto['nome_material']; ?>" required>
+            <label for="quantidade">Quantidade</label>
+
+            <textarea id="id_material" name="nome_material"><?php echo $produto['id_material']; ?></textarea>
+            <label for="categoria">Categoria</label>
+
+            <input type="date" id="data_entrada" name="data_entrada" value="<?php echo $produto['data_entrada']; ?>" required>
+            <label for="data_entrada">Data de Entrada</label>
+
+            <input type="text" id="tipo_movimentacao" name="tipo_movimentacao" value="<?php echo $produto['tipo_movimentacao']; ?>">
+            <label for="tipo_movimentacao">Tipo de Movimentação</label>
+
+            <input type="text" id="data_movimentacao" name="data_movimentacao value="<?php echo $produto['data_movimentacao']; ?>">
+            <label for="data_movimentacao">Data de movimentação:</label>
+            
             <input type="text" id="fabricante" name="fabricante" value="<?php echo $produto['fabricante']; ?>">
             <button type="submit">Salvar Alterações</button>
         </form>
