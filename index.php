@@ -30,7 +30,7 @@ include 'functions.php';
                 
             
                   </p>
-                    <a href="patrimonios/cad_patrimonios.php" class="btn btn-primary">Cadastrar</a> 
+                    <a href="cad_patrimonios.php" class="btn btn-primary">Cadastrar</a> 
                 </div>
             </div>
         </div>

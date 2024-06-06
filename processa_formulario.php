@@ -70,7 +70,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         echo "Erro na inserção dos dados: " . pg_last_error();
     } else {
         // Redireciona para a página de listagem após inserção bem-sucedida
-        header("Location: /patrimonios/listar_produtos.php");
+        header("Location: listar_produtos.php");
         exit;
     }
 }

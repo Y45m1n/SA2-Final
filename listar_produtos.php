@@ -27,7 +27,7 @@ if (!$result) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lista de Produtos</title>
-    <link rel="stylesheet" href="patrimonios.css">
+    <link rel="stylesheet" href="listarprodutos.css">
 </head>
 <body>
     <div class="container">
@@ -70,8 +70,8 @@ if (!$result) {
                     <td><?php echo $produto['proxima_manutencao_programada']; ?></td>
                     <td><?php echo $produto['fabricante']; ?></td>
                     <td>
-                        <a href="/patrimonios/editar_produto.php?numero_patrimonio=<?php echo $produto['numero_patrimonio']; ?>">Editar</a> | 
-                        <a href="/patrimonios/apagar_produto.php?numero_patrimonio=<?php echo $produto['numero_patrimonio']; ?>" onclick="return confirm('Tem certeza que deseja apagar este produto?');">Apagar</a>
+                        <a href="editar_produto.php?numero_patrimonio=<?php echo $produto['numero_patrimonio']; ?>">Editar</a> | 
+                        <a href="apagar_produto.php?numero_patrimonio=<?php echo $produto['numero_patrimonio']; ?>" onclick="return confirm('Tem certeza que deseja apagar este produto?');">Apagar</a>
                     </td>
                 </tr>
                 <?php endwhile; ?>
