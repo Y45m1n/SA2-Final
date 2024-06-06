@@ -29,7 +29,7 @@ include 'functions.php';
                 
             
                   </p>
-                    <a href="patrimonios/cad_patrimonios.php" class="btn btn-primary">Cadastrar</a> 
+                    <a href="cad_patrimonios.php" class="btn btn-primary">Cadastrar</a> 
                 </div>
             </div>
         </div>
@@ -38,7 +38,7 @@ include 'functions.php';
                 <img src="img/minivan.webp" class="card-img-top" alt="Imagem do Card 3" style="width:300px; height: 200px;">
                 <div class="card-body">
                     <h5 class="card-title">Listar Ativos Patrimoniais</h5>
-<a href="patrimonios/listar_produtos.php" class="btn btn-primary">Listar</a> 
+<a href="listar_produtos.php" class="btn btn-primary">Listar</a> 
                 </div>
             </div>
         </div>
