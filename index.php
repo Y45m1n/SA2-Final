@@ -20,7 +20,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             // Verifica se a consulta retornou resultados
             if ($row) {
-                // Login bem-sucedido, redireciona para a página de sucesso ou executa outras ações necessárias
+                // Iniciar a sessão se ainda não estiver iniciada
+                session_start();
+
+                // Definir uma variável de sessão para identificar o usuário como logado
+                $_SESSION['logged_in'] = true;
+
+                // Redirecionar para a página de sucesso
                 header("Location: indexFuncionario.php");
                 exit;
             } else {
@@ -40,7 +46,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 ?>
 
-<?= template_header('Loca aqui!') ?>
+
+<?= template_header('SENAI') ?>
+
 
 <link rel="stylesheet" href="login.css">
 
@@ -54,4 +62,3 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </div>
 
 <?= template_footer() ?>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>

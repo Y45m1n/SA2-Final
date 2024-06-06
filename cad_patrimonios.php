@@ -55,7 +55,10 @@
             <div class="form-row">
                 <div class="form-column">
                     <label for="status_atual">Status Atual:</label>
-                    <input type="text" id="status_atual" name="status_atual">
+                    <select id="status_atual" name="status_atual">
+                        <option value="novo">Novo</option>
+                        <option value="usado">Usado</option>
+                    </select>
                 </div>
                 <div class="form-column">
                     <label for="data_ultima_manutencao">Data da Última Manutenção:</label>

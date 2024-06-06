@@ -50,7 +50,7 @@ label {
     color: #555;
 }
 
-input, textarea, button {
+input, select, textarea, button {
     margin-top: 5px;
     padding: 10px;
     border-radius: 5px;
