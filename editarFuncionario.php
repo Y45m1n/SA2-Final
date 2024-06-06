@@ -14,7 +14,7 @@ if (isset($_GET['cpf'])) {
         $cpf = isset($_POST['cpf']) ? $_POST['cpf'] : '';
         $ra = isset($_POST['ra']) ? $_POST['ra'] : '';
         // Atualiza o registro
-        $stmt = $pdo->prepare('UPDATE funcionario SET  nome = ?, endereco = ?, email = ?,  celular = ?, cpf = ?, ra = ? WHERE id_funcionario = ?');
+        $stmt = $pdo->prepare('UPDATE funcionario SET  nome = ?, endereco = ?, email = ?,  celular = ?, cpf = ?, ra = ? WHERE cpf = ?');
         $stmt->execute([$nome, $endereco, $email, $celular, $cpf, $ra, $_GET['cpf']]);
         $msg = 'Atualização Realizada com Sucesso!';
     }
@@ -37,7 +37,7 @@ if (isset($_GET['cpf'])) {
 <div class="content update">
 <a href="indexFuncionario.php"><i class="fas fa-home"></i>Home Funcionario</a>
     <h2>Atualizar funcionario ---- <?=$funcionario['endereco'],' ', $funcionario['sobrenome']?></h2>
-    <form action="editfuncionario.php?id_funcionario=<?=$funcionario['id_funcionario']?>" method="post">
+    <form action="editarfuncionario.php?cpf=<?=$funcionario['cpf']?>" method="post">
         <label for="nome">nome</label>
         <label for="endereco">endereco</label>
         <input type="text" name="nome" placeholder="nome" value="<?=$funcionario['nome']?>" id="nome">
