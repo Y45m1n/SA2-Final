@@ -13,7 +13,7 @@ include 'functions.php';
                     <div class="card-body">
                         <h5 class="card-title">Cadastro de Item</h5>
                         <p class="card-text">Cadastro de Item para Estoque de Materiais.</p>
-                        <a href="estoque/cadastro_estoque.php" class="btn btn-primary">Cadastrar</a> 
+                        <a href="cadastro_estoque.php" class="btn btn-primary">Cadastrar</a> 
                     </div>
                 </div>
             </div>
@@ -52,7 +52,7 @@ include 'functions.php';
                     <h5 class="card-title">Listar Materais</h5>
                         <p class="card-text">Lista de materiais no da escola.</p>
                         <br>
-                        <a href="estoque/listar_material.php" class="btn btn-primary">Listar</a> 
+                        <a href="listar_material.php" class="btn btn-primary">Listar</a> 
                     </div>
                 </div>
             </div>
