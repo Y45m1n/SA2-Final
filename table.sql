@@ -8,12 +8,20 @@ CREATE TABLE funcionario (
     ra VARCHAR(10)
 );
 
-CREATE TABLE estoque (
-  id_material SERIAL PRIMARY KET
+CREATE TABLE materiais (
+  id_material SERIAL PRIMARY KEY,
   nome_material VARCHAR(50) NOT NULL,
-  quantidade INT(10) NOT NULL,
-  categoria VARCHAR(50) NOT NULL,
+  quantidade INT NOT NULL,
   data_entrada DATE NOT NULL,
-  tipo_movimentacao VARCHAR(50) NOT NULL,
-  data_movimentacao DATE NOT NULL,
+  tipo_material VARCHAR(50) NOT NULL,
+ codigosap INT NOT NULL
+);
+CREATE TABLE retiradas (
+    id_retirada SERIAL PRIMARY KEY,
+    id_material INT NOT NULL,
+    data_retirada DATE NOT NULL,
+    retirador VARCHAR(100) NOT NULL,
+    quantidade INT NOT NULL,
+	codigosapp INT,
+    FOREIGN KEY (id_material) REFERENCES materiais(id_material)
 );

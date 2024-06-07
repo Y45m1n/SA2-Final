@@ -83,39 +83,8 @@ include 'functions.php';
             </div>
         </div>
         <div class="row">
-        <div class="col-md-4 mb-4">
-                <div class="card" style="align-items:center;">
-                <img src="img/listafun.png" class="card-img-top" alt="Imagem do Card 5" style="width:300px; height: 200px;">
-                    <div class="card-body">
-                        <h5 class="card-title">Listar Funcionário</h5>
-                        <p class="card-text">Lista de funcionarios da escola.</p>
-                        <br>
-                        <a href="listarFuncionario.php" class="btn btn-primary">Listar</a> 
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 mb-4">
-                <div class="card" style="align-items:center;">
-                <img src="img/listafun.png" class="card-img-top" alt="Imagem do Card 5" style="width:300px; height: 200px;">
-                    <div class="card-body">
-                        <h5 class="card-title">Listar Funcionário</h5>
-                        <p class="card-text">Lista de funcionarios da escola.</p>
-                        <br>
-                        <a href="listarFuncionario.php" class="btn btn-primary">Listar</a> 
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 mb-4">
-                <div class="card" style="align-items:center;">
-                <img src="img/listafun.png" class="card-img-top" alt="Imagem do Card 5" style="width:300px; height: 200px;">
-                    <div class="card-body">
-                        <h5 class="card-title">Listar Funcionário</h5>
-                        <p class="card-text">Lista de funcionarios da escola.</p>
-                        <br>
-                        <a href="listarFuncionario.php" class="btn btn-primary">Listar</a> 
-                    </div>
-                </div>
-            </div>
+       
+            
         </div>
     </div>
     

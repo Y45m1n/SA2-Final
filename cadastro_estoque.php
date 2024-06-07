@@ -1,35 +1,31 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro de Materiais</title>
-    <link rel="stylesheet" href="estoque.css">
-</head>
-<body>
+<?php
+include 'functions.php';
+
+$pdo = pdo_connect_pgsql();
+$msg = '';
+
+// Verifica se os dados POST não estão vazios
+if (!empty($_POST)) {
+    // Se os dados POST não estiverem vazios, insere um novo registro
+    // Configura as variáveis que serão inseridas. Devemos verificar se as variáveis POST existem e, se não existirem, podemos atribuir um valor padrão a elas.
+    $nome_material = isset($_POST['nome_material']) ? $_POST['nome_material'] : '';
+    $quantidade = isset($_POST['quantidade']) ? $_POST['quantidade'] : '';
+    $data_entrada = isset($_POST['data_entrada']) ? $_POST['data_entrada'] : '';
+    $tipo_material = isset($_POST['tipo_material']) ? $_POST['tipo_material'] : '';
+    $codigosap = isset($_POST['codigosap']) ? $_POST['codigosap'] : '';
+
+    // Insere um novo registro na tabela de materiais
+    $stmt = $pdo->prepare('INSERT INTO materiais (nome_material, quantidade, data_entrada, tipo_material, codigosap) VALUES (?, ?, ?, ?, ?)');
+    $stmt->execute([$nome_material, $quantidade, $data_entrada, $tipo_material, $codigosap]);
+    // Mensagem de saída
+    $msg = 'Material cadastrado com sucesso!';
+}
+
+?>
+<?=template_header('Cadastro de Funcionário')?>
 <div class="container">
+  <link rel="stylesheet" href="estoque.css">
   <h1>Cadastro de Materiais</h1>
-  <?php
-    include 'functions.php';
-    $pdo = pdo_connect_pgsql();
-    $msg = '';
-
-    // Verifica se os dados POST não estão vazios
-    if (!empty($_POST)) {
-        // Se os dados POST não estiverem vazios, insere um novo registro
-        // Configura as variáveis que serão inseridas. Devemos verificar se as variáveis POST existem e, se não existirem, podemos atribuir um valor padrão a elas.
-        $nome_material = isset($_POST['nome_material']) ? $_POST['nome_material'] : '';
-        $quantidade = isset($_POST['quantidade']) ? $_POST['quantidade'] : '';
-        $data_entrada = isset($_POST['data_entrada']) ? $_POST['data_entrada'] : '';
-        $tipo_material = isset($_POST['tipo_material']) ? $_POST['tipo_material'] : '';
-
-        // Insere um novo registro na tabela de materiais
-        $stmt = $pdo->prepare('INSERT INTO materiais (nome_material, quantidade, data_entrada, tipo_material) VALUES (?, ?, ?, ?)');
-        $stmt->execute([$nome_material, $quantidade, $data_entrada, $tipo_material]);
-        // Mensagem de saída
-        $msg = 'Material cadastrado com sucesso!';
-    }
-  ?>
   <form action="cadastro_estoque.php" method="post">
     <div class="form-row">
       <div class="form-column">
@@ -59,6 +55,10 @@
           <option value="Eletrônico">Eletrônico</option>
           <option value="Químico">Químico</option>
         </select>
+      </div>
+      <div class="form-column">
+        <label for="codigosap">Codigo SAP</label>
+        <input type="text" id="codigosap" name="codigosap" required>
       </div>
     </div>
     <input type="submit" value="Cadastrar">
